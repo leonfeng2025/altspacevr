@@ -1,0 +1,92 @@
+
+> hello-world@0.1.0 start /root/git/mixed-reality-extension-sdk-samples/samples/hello-world
+> node .
+
+2022-07-13T07:31:19.473Z app Node: v10.24.0
+2022-07-13T07:31:19.474Z app @microsoft/mixed-reality-extension-sdk: v0.20.0
+(node:10371) [DEP0091] DeprecationWarning: crypto.DEFAULT_ENCODING is deprecated.
+(node:10371) [DEP0010] DeprecationWarning: crypto.createCredentials is deprecated. Use tls.createSecureContext instead.
+(node:10371) [DEP0011] DeprecationWarning: crypto.Credentials is deprecated. Use tls.SecureContext instead.
+2022-07-13T07:31:19.492Z app Multi-peer Adapter listening on {"address":"::","family":"IPv6","port":3901}
+2022-07-13T07:31:19.492Z app baseUrl: http://127.0.0.1:3901
+2022-07-13T07:31:19.492Z app baseDir: /root/git/mixed-reality-extension-sdk-samples/samples/hello-world/public
+
+> hello-world@0.1.0 start /root/git/mixed-reality-extension-sdk-samples/samples/hello-world
+> node .
+
+2022-07-13T07:37:43.971Z app Node: v10.24.0
+2022-07-13T07:37:43.972Z app @microsoft/mixed-reality-extension-sdk: v0.20.0
+(node:10954) [DEP0091] DeprecationWarning: crypto.DEFAULT_ENCODING is deprecated.
+(node:10954) [DEP0010] DeprecationWarning: crypto.createCredentials is deprecated. Use tls.createSecureContext instead.
+(node:10954) [DEP0011] DeprecationWarning: crypto.Credentials is deprecated. Use tls.SecureContext instead.
+2022-07-13T07:37:43.989Z app Multi-peer Adapter listening on {"address":"::","family":"IPv6","port":3901}
+2022-07-13T07:37:43.989Z app baseUrl: http://127.0.0.1:3901
+2022-07-13T07:37:43.989Z app baseDir: /root/git/mixed-reality-extension-sdk-samples/samples/hello-world/public
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+grab begin
+grab end
+unhandledRejection Connection closed.
+unhandledRejection Connection closed.
+grab begin
+grab end
+grab begin
+grab end

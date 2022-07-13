@@ -1,0 +1,12 @@
+
+> hello-world@0.1.0 start /root/git/mixed-reality-extension-sdk-samples/samples/hello-world
+> node .
+
+2022-07-13T07:29:46.811Z app Node: v10.24.0
+2022-07-13T07:29:46.812Z app @microsoft/mixed-reality-extension-sdk: v0.20.0
+(node:10116) [DEP0091] DeprecationWarning: crypto.DEFAULT_ENCODING is deprecated.
+(node:10116) [DEP0010] DeprecationWarning: crypto.createCredentials is deprecated. Use tls.createSecureContext instead.
+(node:10116) [DEP0011] DeprecationWarning: crypto.Credentials is deprecated. Use tls.SecureContext instead.
+2022-07-13T07:29:46.830Z app Multi-peer Adapter listening on {"address":"::","family":"IPv6","port":3901}
+2022-07-13T07:29:46.830Z app baseUrl: http://127.0.0.1:3901
+2022-07-13T07:29:46.830Z app baseDir: /root/git/mixed-reality-extension-sdk-samples/samples/hello-world/public
