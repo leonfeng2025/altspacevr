@@ -62,7 +62,7 @@ module.exports = {
 		"prefer-regex-literals": "warn",
 		"require-unicode-regexp": "error",
 		"yoda": "warn",
-
+		"linebreak-style": ["off", "windows"],
 		"@typescript-eslint/array-type": [
 			"error",
 			{ "default": "array-simple" }
