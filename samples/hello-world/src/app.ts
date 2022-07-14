@@ -35,6 +35,7 @@ export default class HelloWorld {
 
 		this.cube.onGrab('begin',function(){
 			console.log('grab begin');
+			golo.destroy();
 			// 创建一个没有网格,但有文字的新演员
 			golo = MRE.Actor.Create(context, {
 				actor: {
@@ -43,7 +44,7 @@ export default class HelloWorld {
 						app: { position: { x: 0, y: 0.5, z: 0 } }
 					},
 					text: {
-						contents: "这是一个来自于乾隆年间的青花瓷罐",
+						contents: "一个来自于乾隆的青花瓷",
 						anchor: MRE.TextAnchorLocation.MiddleCenter,
 						color: { r: 30 / 255, g: 206 / 255, b: 213 / 255 },
 						height: 0.1

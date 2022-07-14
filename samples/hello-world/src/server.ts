@@ -8,24 +8,21 @@ import dotenv from 'dotenv';
 import { resolve as resolvePath } from 'path';
 import App from './app';
 
-// add some generic error handlers here, to log any exceptions we're not expecting
+//在这里添加一些通用错误处理程序，以记录我们不期望的任何异常
 process.on('uncaughtException', err => console.log('uncaughtException', err));
 process.on('unhandledRejection', reason => console.log('unhandledRejection', reason));
 
-// Read .env if file exists
+// Read .env 如果文件存在 read .env
 dotenv.config();
 
-// This function starts the MRE server. It will be called immediately unless
-// we detect that the code is running in a debuggable environment. If so, a
-// small delay is introduced allowing time for the debugger to attach before
-// the server starts accepting connections.
+//此功能启动MRE服务器。除非我们检测到代码正在可调试环境中运行，否则它将立即被调用。如果是这样，则会引入一个小延迟，以便在服务器开始接受连接之前有时间让调试器连接。
 function runApp() {
-	// Start listening for connections, and serve static files.
+	// 开始侦听连接，并提供静态文件
 	const server = new MRE.WebHost({
 		baseDir: resolvePath(__dirname, '../public')
 	});
 
-	// Handle new application sessions
+	// Handle new application sessions 处理新的应用程序会话
 	server.adapter.onConnection(context => new App(context));
 }
 
