@@ -24,7 +24,7 @@ export default class HelloWorld {
 		
 		this.assets = new MRE.AssetContainer(this.context);
 		this.cube = MRE.Actor.CreateFromLibrary(this.context,{
-			resourceId:'artifact:2044817928523613147'
+			resourceId:'artifact:2045552194714861713'
 		})
 		this.cube.grabbable = true;
 
@@ -35,7 +35,6 @@ export default class HelloWorld {
 
 		this.cube.onGrab('begin',function(){
 			console.log('grab begin');
-			golo.destroy();
 			// 创建一个没有网格,但有文字的新演员
 			golo = MRE.Actor.Create(context, {
 				actor: {
