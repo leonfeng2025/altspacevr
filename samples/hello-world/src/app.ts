@@ -10,7 +10,11 @@ import * as MRE from '@microsoft/mixed-reality-extension-sdk';
  */
 export default class HelloWorld {
 	private text: MRE.Actor = null;
-	private cube: MRE.Actor = null;
+	private item1: MRE.Actor = null;
+	private item2: MRE.Actor = null;
+	private item3: MRE.Actor = null;
+	private item4: MRE.Actor = null;
+
 	private assets: MRE.AssetContainer;
 	// Container for an application session. The Context contains all application state for a session of your application. This includes Actors, Users, Assets, and other state.
 	// 应用程序会话的容器。Context包含应用程序会话的所有应用程序状态。这包括参与者、用户、资产和其他状态。
@@ -23,17 +27,30 @@ export default class HelloWorld {
 	private started() {
 		
 		this.assets = new MRE.AssetContainer(this.context);
-		this.cube = MRE.Actor.CreateFromLibrary(this.context,{
+
+		this.item1 = MRE.Actor.CreateFromLibrary(this.context,{
+			resourceId:'artifact:2044817928523613147'
+		})
+		this.item1.grabbable = true;
+
+		this.item2 = MRE.Actor.CreateFromLibrary(this.context,{
 			resourceId:'artifact:2045552194714861713'
 		})
-		this.cube.grabbable = true;
+		this.item2.grabbable = true;
+        this.item2.transform.app.position = new MRE.Vector3(0.25,0,-2.4);
+
+		this.item3 = MRE.Actor.CreateFromLibrary(this.context,{
+			resourceId:'artifact:2045552179640533118'
+		})
+		this.item3.grabbable = true;
+        this.item3.transform.app.position = new MRE.Vector3(-0.15,0,2.53);
 
 		let golo = this.text
 		const context = this.context
 		const localAsset = this.assets
 		const localGenerateSpinKeyframes = this.generateSpinKeyframes(20, MRE.Vector3.Up())
 
-		this.cube.onGrab('begin',function(){
+		this.item1.onGrab('begin',function(){
 			console.log('grab begin');
 			// 创建一个没有网格,但有文字的新演员
 			golo = MRE.Actor.Create(context, {
@@ -82,7 +99,7 @@ export default class HelloWorld {
 				{ isPlaying: true, wrapMode: MRE.AnimationWrapMode.PingPong });	
 		})
 
-		this.cube.onGrab('end',function(){
+		this.item1.onGrab('end',function(){
 			console.log('grab end');
 			golo.destroy();
 		})
