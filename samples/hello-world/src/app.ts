@@ -38,7 +38,7 @@ export default class HelloWorld {
 		})
 		this.item2.grabbable = true;
         this.item2.transform.app.position = new MRE.Vector3(0.25,0,-2.4);
-
+		
 		this.item3 = MRE.Actor.CreateFromLibrary(this.context,{
 			resourceId:'artifact:2045552179640533118'
 		})
