@@ -7,7 +7,7 @@ import * as MRE from '@microsoft/mixed-reality-extension-sdk';
 import dotenv from 'dotenv';
 import { resolve as resolvePath } from 'path';
 import App from './app';
-import App2 from './app';
+import App2 from './app2';
 
 //在这里添加一些通用错误处理程序，以记录我们不期望的任何异常
 process.on('uncaughtException', err => console.log('uncaughtException', err));
