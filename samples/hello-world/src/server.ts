@@ -11,6 +11,7 @@ import App2 from './app2';
 import App3 from './app3';
 import App4 from './app4';
 import App5 from './app5';
+import App6 from './app6';
 
 //在这里添加一些通用错误处理程序，以记录我们不期望的任何异常
 process.on('uncaughtException', err => console.log('uncaughtException', err));
@@ -27,23 +28,28 @@ function runApp() {
 	});
 
 	const server2 = new MRE.WebHost({
-		baseDir: resolvePath(__dirname, '../public/index2.html'),
+		baseDir: resolvePath(__dirname, '../public'),
 		port: 3902
 	});
 
 	const server3 = new MRE.WebHost({
-		baseDir: resolvePath(__dirname, '../public/index3.html'),
+		baseDir: resolvePath(__dirname, '../public'),
 		port: 3903
 	});
 
 	const server4 = new MRE.WebHost({
-		baseDir: resolvePath(__dirname, '../public/index4.html'),
+		baseDir: resolvePath(__dirname, '../public'),
 		port: 3904
 	});
 
 	const server5 = new MRE.WebHost({
-		baseDir: resolvePath(__dirname, '../public/index5.html'),
+		baseDir: resolvePath(__dirname, '../public'),
 		port: 3905
+	});
+
+	const server6 = new MRE.WebHost({
+		baseDir: resolvePath(__dirname, '../public'),
+		port: 3906
 	});
 
 	// Handle new application sessions 处理新的应用程序会话
@@ -52,6 +58,7 @@ function runApp() {
 	server3.adapter.onConnection(context => new App3(context));
 	server4.adapter.onConnection(context => new App4(context));
 	server5.adapter.onConnection(context => new App5(context));
+	server6.adapter.onConnection(context => new App6(context));
 }
 
 // Check whether code is running in a debuggable watched filesystem

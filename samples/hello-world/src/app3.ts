@@ -35,7 +35,7 @@ export default class HelloWorld {
 		// 一旦创建了动画数据，我们就可以从中创建真实的动画
 		spinAnimData.bind(
 			// We assign our text actor to the actor placeholder "objectA"
-			{ objectA: this.item1  },
+			{ objectA: this.item1 },
 			// 并将其设置为立即播放，从开始到结束来回反弹
 			{ isPlaying: true, wrapMode: MRE.AnimationWrapMode.PingPong }
 		);	
