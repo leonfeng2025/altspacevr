@@ -6,13 +6,13 @@
 import * as MRE from '@microsoft/mixed-reality-extension-sdk';
 import dotenv from 'dotenv';
 import { resolve as resolvePath } from 'path';
-import App from './app';
-import App2 from './app2';
-import App3 from './app3';
-import App4 from './app4';
-import App5 from './app5';
-import App6 from './app6';
-
+import App from './items';
+import App2 from './gun';
+import App3 from './mywizard';
+import App4 from './apd';
+import App5 from './rpa';
+import App6 from './chatbot';
+import App7 from './whiteboard';
 //在这里添加一些通用错误处理程序，以记录我们不期望的任何异常
 process.on('uncaughtException', err => console.log('uncaughtException', err));
 process.on('unhandledRejection', reason => console.log('unhandledRejection', reason));
@@ -52,6 +52,11 @@ function runApp() {
 		port: 3906
 	});
 
+	const server7 = new MRE.WebHost({
+		baseDir: resolvePath(__dirname, '../public'),
+		port: 3907
+	});
+
 	// Handle new application sessions 处理新的应用程序会话
 	server1.adapter.onConnection(context => new App(context));
 	server2.adapter.onConnection(context => new App2(context));
@@ -59,6 +64,7 @@ function runApp() {
 	server4.adapter.onConnection(context => new App4(context));
 	server5.adapter.onConnection(context => new App5(context));
 	server6.adapter.onConnection(context => new App6(context));
+	server7.adapter.onConnection(context => new App7(context));
 }
 
 // Check whether code is running in a debuggable watched filesystem
